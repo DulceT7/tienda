@@ -6,9 +6,9 @@ import javax.swing.border.LineBorder;
 import paneles.PanelBuscar;
 import paneles.PanelProductos;
 
-public class vista extends JFrame {
+public class Dashboard extends JFrame {
 
-    public vista() {
+    public Dashboard(String listaProductos) {
         setTitle("Tienda Java");
         setSize(1000, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -24,10 +24,12 @@ public class vista extends JFrame {
         panelPadre.add(panelBuscar.getPanel(), BorderLayout.WEST);
 
         // Panel Productos (centro)
-        PanelProductos panelProductos = new PanelProductos();
+        PanelProductos panelProductos = new PanelProductos(listaProductos);
         panelPadre.add(panelProductos.getPanel(), BorderLayout.CENTER);
 
-        // Agregar panelPadre al JFrame
-        add(panelPadre);
+
+        this.add(panelPadre);
+        // Mostrar ventana
+        this.setVisible(true);
     }
 }

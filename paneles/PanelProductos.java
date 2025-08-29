@@ -6,7 +6,7 @@ import java.awt.*;
 public class PanelProductos {
     private JPanel panelProductos; 
 
-    public PanelProductos() {
+    public PanelProductos( String listaProductos) {
         panelProductos = new JPanel();
         panelProductos.setLayout(new BorderLayout()); 
 
